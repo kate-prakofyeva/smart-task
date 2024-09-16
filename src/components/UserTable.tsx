@@ -35,7 +35,9 @@ const UserTable: FC = () => {
 
   const handleSort = (field: SortType) => {
     const order =
-      sortField === field && SortOrder.ASC ? SortOrder.DESC : SortOrder.ASC;
+      sortField === field && sortOrder === SortOrder.ASC
+        ? SortOrder.DESC
+        : SortOrder.ASC;
     setSortField(field);
     setSortOrder(order);
   };
